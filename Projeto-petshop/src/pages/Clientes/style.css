@@ -1,0 +1,135 @@
+.services {
+  padding: 38px 0 96px;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #e37452;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #263d35;
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.section-heading p {
+  max-width: 540px;
+  margin: 14px auto 0;
+  color: #6f7d75;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.service-card {
+  min-height: 210px;
+  padding: 24px;
+  border: 1px solid #e8eee8;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgb(42 68 54 / 5%);
+  text-align: left;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbdccf;
+  box-shadow: 0 16px 36px rgb(42 68 54 / 10%);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 16px;
+  background: #f1f6ed;
+  font-size: 1.65rem;
+}
+
+.service-number {
+  color: #c8d3ca;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.service-card h3 {
+  margin: 0 0 8px;
+  color: #263d35;
+  font-size: 1.12rem;
+  letter-spacing: -0.02em;
+}
+
+.service-card p {
+  margin: 0;
+  color: #718078;
+  font-size: 0.91rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .services {
+    padding: 24px 0 68px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading p {
+    font-size: 0.94rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: 0;
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card {
+    transition: none;
+  }
+}
